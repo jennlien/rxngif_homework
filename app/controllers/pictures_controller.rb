@@ -14,4 +14,8 @@ class PicturesController < ApplicationController
  	@new_picture.save
   end
   
+  def destroy
+  	picture_to_be_destroyed = Picture.find(params[:id])
+  	picture_to_be_destroyed.destroy
+  end
 end
