@@ -6,4 +6,12 @@ class PicturesController < ApplicationController
   def index
   	@list_of_pictures = Picture.all
   end
+
+  def create
+  	@new_picture = Picture.new
+  	@new_picture.source = params[:source]
+ 	@new_picture.caption = params[:caption]
+ 	@new_picture.save
+  end
+  
 end
