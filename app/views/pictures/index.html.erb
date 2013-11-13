@@ -3,10 +3,10 @@
 <ul>
 	<% @list_of_pictures. each do |pic|%>
 		<li>
-			<img width = "200" src ="<%=pic.source %>">
+			<%=image_tag(pic.source, :width => 200)%>
 			<%= pic.caption%>
 		</li>
-		<a href="http://localhost:3000/pictures_details/<%=pic.id%>"Show</a>
+		<a href="http://localhost:3000/pictures_details/<%=pic.id%>">Show</a>
 		<a href="http://localhost:3000/edit_picture_form/<%=pic.id%>">Edit</a>
 		<a href="http://localhost:3000/delete_picture">Delete</a>
 	<%end%>
