@@ -6,8 +6,10 @@
 			<%=image_tag(pic.source, :width => 200)%>
 			<%= pic.caption%>
 		</li>
-		<a href="http://localhost:3000/pictures_details/<%=pic.id%>">Show</a>
-		<a href="http://localhost:3000/edit_picture_form/<%=pic.id%>">Edit</a>
-		<a href="http://localhost:3000/delete_picture">Delete</a>
+
+		<%=link_to("Show","http://localhost:3000/picture_details/#{pic.id}")%>
+		<%=link_to("Edit","http://localhost:3000/edit_picture_form/#{pic.id}")%>
+		<%=link_to("Delete","http://localhost:3000/delete_picture")%>
+
 	<%end%>
 </ul>
