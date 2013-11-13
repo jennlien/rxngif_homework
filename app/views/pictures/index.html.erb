@@ -9,7 +9,7 @@
 
 		<%=link_to("Show","http://localhost:3000/picture_details/#{pic.id}")%>
 		<%=link_to("Edit","http://localhost:3000/edit_picture_form/#{pic.id}")%>
-		<%=link_to("Delete","http://localhost:3000/delete_picture")%>
+		<%=link_to("Delete","http://localhost:3000/delete_picture", :method => "delete")%>
 
 	<%end%>
 </ul>
