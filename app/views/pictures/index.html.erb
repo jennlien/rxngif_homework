@@ -1,15 +1,16 @@
 <h1>List of Pictures</h1>
 
+<%= link_to "Add a new picture", new_picture_url%>
 <ul>
-	<% @list_of_pictures. each do |pic|%>
-		<li>
+	<% @list_of_pictures.each do |pic|%>
+	  <li>
+		<div>
 			<%=image_tag(pic.source, :width => 200)%>
-			<%= pic.caption%>
-		</li>
-
+		</div>
+		<p><%= pic.caption%></p>
 		<%=link_to("Show",picture_url(pic.id)%>
 		<%=link_to("Edit",edit_picture_url(pic.id)%>
 		<%=link_to("Delete",picture_url(pic.id), :method => "delete")%>
-
-	<%end%>
+	  </li>
+	<% end %>
 </ul>

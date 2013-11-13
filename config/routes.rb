@@ -6,7 +6,7 @@ Rxngif::Application.routes.draw do
 
 #READ
  get "/pictures/:id", :controller => "pictures", :action => "show", :as=>"picture"
- get "/pictures", :controller => "pictures", :action => "index", 
+ get "/pictures", :controller => "pictures", :action => "index" 
 
 #UPDATE 
   patch "/picture/:id", :controller => "pictures", :action => "update"
